@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "a3f97815-b9e9-47a9-938d-9a7f868a6409",
+		"name": "EmployeeAPITest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostEmpTest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmployeeID\" : 109,\r\n    \"FirstName\" : \"FN\",\r\n    \"LastName\" : \"LName2\",\r\n    \"Email\" : \"Email2@aaa.bbb\",\r\n    \"Phone\" : \"123-456-7890\",\r\n    \"JobId\" : 2,\r\n    \"ManagerId\" : 100,\r\n    \"DepartmentId\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/Employees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEmployees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/Employees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/Employees?id=100",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"EmployeeID\": 105,\r\n    \"FirstName\": \"FName22\",\r\n    \"LastName\": \"LName2\",\r\n    \"Email\": \"Email2@aaa.abc\",\r\n    \"Phone\": \"123-456-7890\",\r\n    \"JobId\": 2,\r\n    \"ManagerId\": 100,\r\n    \"DepartmentId\" : 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44386/api/Employees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/Employees?id=108",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "108"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmployeeFromQuery",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/Employees",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetEmpFull",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44386/api/Employees?id=101&v=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44386",
+					"path": [
+						"api",
+						"Employees"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "101"
+						},
+						{
+							"key": "v",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
